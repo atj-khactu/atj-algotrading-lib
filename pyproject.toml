@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ATJ_Algo_Trading_Package"
+version = "0.0.1"
+authors = [
+  { name="Khac Tu Nguyen", email="khactu@atj-traders.com" },
+]
+description = "ATJ Trader's Package for Algo Trading & Backtesting"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/atj-algotrading"]
+
+[project.urls]
+Homepage = "https://github.com/atj-khactu/atj-algotrading-package"
+Issues = "https://github.com/atj-khactu/atj-algotrading-package/issues"
