@@ -18,6 +18,7 @@ classifiers = [
 dependencies = [
   "MetaTrader5",
   "pandas",
+  "numpy==1.26.4",
   "plotly",
   "jupyter",
 ]
