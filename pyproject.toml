@@ -15,6 +15,14 @@ classifiers = [
     "Programming Language :: Python :: 3",
 ]
 
+dependencies = [
+  "MetaTrader5",
+  "pandas",
+  "numpy==1.26.4",
+  "plotly",
+  "jupyter",
+]
+
 [tool.hatch.build.targets.wheel]
 packages = ["src/atj_algotrading"]
 
