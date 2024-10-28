@@ -124,3 +124,12 @@ def get_positions(magic=None):
         return pd.DataFrame(columns=['ticket', 'time', 'time_msc', 'time_update', 'time_update_msc', 'type',
                                      'magic', 'identifier', 'reason', 'volume', 'price_open', 'sl', 'tp',
                                      'price_current', 'swap', 'profit', 'symbol', 'comment', 'external_id'])
+
+
+# Extract Data and Visualization
+def get_ohlc_history(symbol, timeframe, date_from, date_to):
+    ohlc = mt5.copy_rates_range(symbol, timeframe, date_from, date_to)
+
+    ohlc_df = pd.DataFrame(ohlc)
+    ohlc_df['time'] = pd.to_datetime(ohlc_df['time'], unit='s')
+    return ohlc_df[['time', 'open', 'high', 'low', 'close']]
