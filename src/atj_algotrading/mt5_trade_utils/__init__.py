@@ -133,3 +133,10 @@ def get_ohlc_history(symbol, timeframe, date_from, date_to):
     ohlc_df = pd.DataFrame(ohlc)
     ohlc_df['time'] = pd.to_datetime(ohlc_df['time'], unit='s')
     return ohlc_df[['time', 'open', 'high', 'low', 'close']]
+
+def get_tick_history(symbol, start, end):
+    ticks = mt5.copy_ticks_range(symbol, start, end, mt5.COPY_TICKS_ALL)
+    ticks_df = pd.DataFrame(ticks)
+    ticks_df['time'] = pd.to_datetime(ticks_df['time'], unit='s')
+    ticks_df = ticks_df[['time', 'bid', 'ask']]
+    return ticks_df

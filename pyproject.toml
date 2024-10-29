@@ -4,19 +4,18 @@ build-backend = "hatchling.build"
 
 [project]
 name = "atj-algotrading"
-version = "0.0.7"
+version = "0.0.12"
 authors = [
   { name="Khac Tu Nguyen", email="khactu@atj-traders.com" },
 ]
 description = "ATJ Trader's Package for Algo Trading & Backtesting"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.9"
 classifiers = [
     "Programming Language :: Python :: 3",
 ]
 
 dependencies = [
-  "MetaTrader5",
   "pandas",
   "numpy==1.26.4",
   "plotly",

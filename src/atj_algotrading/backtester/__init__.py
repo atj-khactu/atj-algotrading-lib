@@ -286,14 +286,6 @@ def create_price_fig(ohlc, indicators=[]):
     return fig
 
 
-def get_tick_history(symbol, start, end):
-    ticks = mt5.copy_ticks_range(symbol, start, end, mt5.COPY_TICKS_ALL)
-    ticks_df = pd.DataFrame(ticks)
-    ticks_df['time'] = pd.to_datetime(ticks_df['time'], unit='s')
-    ticks_df = ticks_df[['time', 'bid', 'ask']]
-    return ticks_df
-
-
 def evaluate_backtest(df_og):
     df = df_og.copy()
     df['open_time'] = pd.to_datetime(df['open_time'])
