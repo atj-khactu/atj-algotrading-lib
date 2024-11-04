@@ -20,6 +20,7 @@ dependencies = [
   "numpy==1.26.4",
   "plotly",
   "jupyter",
+  "requests"
 ]
 
 [tool.hatch.build.targets.wheel]
